@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--
+        Backup rules for Android Auto Backup.
+        For this app, we allow backup of Room database and preferences.
+    -->
+    <full-backup-content>
+        <include domain="database" path="."/>
+        <include domain="sharedpref" path="."/>
+    </full-backup-content>
+</resources>

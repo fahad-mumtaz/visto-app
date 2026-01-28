@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Vesto</string>
+    
+    <!-- Onboarding -->
+    <string name="onboarding_welcome_title">Welcome to Vesto</string>
+    <string name="onboarding_welcome_subtitle">Your personal finance companion</string>
+    <string name="onboarding_budget_title">Set Your Monthly Budget</string>
+    <string name="onboarding_currency_title">Choose Your Currency</string>
+    
+    <!-- Navigation -->
+    <string name="nav_dashboard">Dashboard</string>
+    <string name="nav_expenses">Expenses</string>
+    <string name="nav_insights">Insights</string>
+    <string name="nav_settings">Settings</string>
+    
+    <!-- Dashboard -->
+    <string name="dashboard_budget_progress">Budget Progress</string>
+    <string name="dashboard_money_left">Money Left</string>
+    <string name="dashboard_weekly_expenses">Weekly Expenses</string>
+    <string name="dashboard_monthly_expenses">Monthly Expenses</string>
+    
+    <!-- Expense -->
+    <string name="add_expense">Add Expense</string>
+    <string name="expense_amount">Amount</string>
+    <string name="expense_category">Category</string>
+    <string name="expense_notes">Notes (Optional)</string>
+    <string name="expense_date">Date</string>
+    
+    <!-- Categories -->
+    <string name="category_food">Food</string>
+    <string name="category_transport">Transport</string>
+    <string name="category_shopping">Shopping</string>
+    <string name="category_entertainment">Entertainment</string>
+    <string name="category_bills">Bills</string>
+    <string name="category_health">Health</string>
+    <string name="category_education">Education</string>
+    <string name="category_other">Other</string>
+    
+    <!-- Actions -->
+    <string name="action_save">Save</string>
+    <string name="action_cancel">Cancel</string>
+    <string name="action_delete">Delete</string>
+    <string name="action_undo">Undo</string>
+    <string name="action_next">Next</string>
+    <string name="action_done">Done</string>
+    
+    <!-- Settings -->
+    <string name="settings_budget">Monthly Budget</string>
+    <string name="settings_currency">Currency</string>
+    <string name="settings_categories">Manage Categories</string>
+    <string name="settings_dark_mode">Dark Mode</string>
+    <string name="settings_notifications">Notifications</string>
+    
+    <!-- Messages -->
+    <string name="expense_deleted">Expense deleted</string>
+    <string name="expense_saved">Expense saved</string>
+    <string name="budget_alert">You\'re approaching your budget limit!</string>
+    
+    <!-- Content Descriptions (Accessibility) -->
+    <string name="cd_add_expense_button">Add new expense</string>
+    <string name="cd_delete_expense">Delete expense</string>
+    <string name="cd_back_button">Go back</string>
+</resources>

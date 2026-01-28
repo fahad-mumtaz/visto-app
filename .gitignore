@@ -1,0 +1,54 @@
+.gradle/
+.idea/
+*.iml
+.DS_Store
+build/
+/captures
+.externalNativeBuild
+.cxx
+local.properties
+*.apk
+*.ap_
+*.aab
+
+# Built application files
+*.aab
+*.ap_
+*.apk
+
+# Files for the ART/Dalvik VM
+*.dex
+
+# Generated files
+bin/
+gen/
+out/
+
+# Gradle files
+.gradle/
+build/
+
+# Local configuration file (sdk path, etc)
+local.properties
+
+# Android Studio
+*.iml
+.idea/
+.navigation/
+captures/
+output.json
+
+# Keystore files
+*.jks
+*.keystore
+
+# External native build folder
+/.externalNativeBuild
+/.cxx
+
+# Google Services
+google-services.json
+
+# OS-specific files
+.DS_Store
+Thumbs.db
