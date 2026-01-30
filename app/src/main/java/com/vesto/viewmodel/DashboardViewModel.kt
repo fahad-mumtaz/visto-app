@@ -64,6 +64,22 @@ class DashboardViewModel(
 }
 
 /**
+ * ViewModel Factory for DashboardViewModel
+ */
+class DashboardViewModelFactory(
+    private val expenseRepository: ExpenseRepository,
+    private val userPreferencesRepository: UserPreferencesRepository
+) : androidx.lifecycle.ViewModelProvider.Factory {
+    @Suppress("UNCHECKED_CAST")
+    override fun <T : androidx.lifecycle.ViewModel> create(modelClass: Class<T>): T {
+        if (modelClass.isAssignableFrom(DashboardViewModel::class.java)) {
+            return DashboardViewModel(expenseRepository, userPreferencesRepository) as T
+        }
+        throw IllegalArgumentException("Unknown ViewModel class")
+    }
+}
+
+/**
  * Dashboard UI State
  */
 data class DashboardUiState(

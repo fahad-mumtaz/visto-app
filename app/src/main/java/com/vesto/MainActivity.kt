@@ -5,6 +5,7 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Surface
@@ -30,10 +31,7 @@ import com.vesto.ui.insights.InsightsScreen
 import com.vesto.ui.onboarding.OnboardingNavHost
 import com.vesto.ui.settings.SettingsScreen
 import com.vesto.ui.theme.VestoTheme
-import com.vesto.viewmodel.DashboardViewModel
-import com.vesto.viewmodel.ExpenseViewModel
-import com.vesto.viewmodel.OnboardingViewModel
-import com.vesto.viewmodel.SettingsViewModel
+import com.vesto.viewmodel.*
 import kotlinx.coroutines.launch
 
 /**
@@ -155,11 +153,11 @@ fun MainNavHost(
                 }
             )
         }
-    ) { padding ->
+    ) { innerPadding ->
         NavHost(
             navController = navController,
             startDestination = Screen.Dashboard.route,
-            modifier = Modifier.padding(padding)
+            modifier = Modifier.padding(innerPadding)
         ) {
             composable(Screen.Dashboard.route) {
                 val dashboardViewModel: DashboardViewModel = viewModel(
@@ -218,35 +216,3 @@ fun MainNavHost(
         )
     }
 }
-
-/**
- * ViewModel Factory for ExpenseViewModel
- */
-class ExpenseViewModelFactory(
-    private val expenseRepository: ExpenseRepository,
-    private val categoryRepository: CategoryRepository
-) : androidx.lifecycle.ViewModelProvider.Factory {
-    @Suppress("UNCHECKED_CAST")
-    override fun <T : androidx.lifecycle.ViewModel> create(modelClass: Class<T>): T {
-        if (modelClass.isAssignableFrom(ExpenseViewModel::class.java)) {
-            return ExpenseViewModel(expenseRepository, categoryRepository) as T
-        }
-        throw IllegalArgumentException("Unknown ViewModel class")
-    }
-}
-
-/**
- * ViewModel Factory for SettingsViewModel
- */
-class SettingsViewModelFactory(
-    private val userPreferencesRepository: UserPreferencesRepository
-) : androidx.lifecycle.ViewModelProvider.Factory {
-    @Suppress("UNCHECKED_CAST")
-    override fun <T : androidx.lifecycle.ViewModel> create(modelClass: Class<T>): T {
-        if (modelClass.isAssignableFrom(SettingsViewModel::class.java)) {
-            return SettingsViewModel(userPreferencesRepository) as T
-        }
-        throw IllegalArgumentException("Unknown ViewModel class")
-    }
-}
-

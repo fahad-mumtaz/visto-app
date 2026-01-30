@@ -28,7 +28,7 @@ data class UserPreferencesEntity(
 /**
  * Supported currencies with their symbols
  */
-enum class Currency(val code: String, val symbol: String, val name: String) {
+enum class Currency(val code: String, val symbol: String, val currencyName: String) {
     PKR("PKR", "₨", "Pakistani Rupee"),
     USD("USD", "$", "US Dollar"),
     EUR("EUR", "€", "Euro"),

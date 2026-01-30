@@ -177,6 +177,7 @@ fun AddExpenseBottomSheet(
 /**
  * Category Chip for selection
  */
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 private fun CategoryChip(
     category: CategoryEntity,

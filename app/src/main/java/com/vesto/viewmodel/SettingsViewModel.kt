@@ -41,3 +41,18 @@ class SettingsViewModel(
         }
     }
 }
+
+/**
+ * ViewModel Factory for SettingsViewModel
+ */
+class SettingsViewModelFactory(
+    private val userPreferencesRepository: UserPreferencesRepository
+) : androidx.lifecycle.ViewModelProvider.Factory {
+    @Suppress("UNCHECKED_CAST")
+    override fun <T : androidx.lifecycle.ViewModel> create(modelClass: Class<T>): T {
+        if (modelClass.isAssignableFrom(SettingsViewModel::class.java)) {
+            return SettingsViewModel(userPreferencesRepository) as T
+        }
+        throw IllegalArgumentException("Unknown ViewModel class")
+    }
+}

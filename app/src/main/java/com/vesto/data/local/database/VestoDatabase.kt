@@ -33,7 +33,7 @@ import kotlinx.coroutines.launch
         ExpenseEntity::class
     ],
     version = 1,
-    exportSchema = true
+    exportSchema = false
 )
 abstract class VestoDatabase : RoomDatabase() {
     

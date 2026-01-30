@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Vesto</string>
+    <string name="app_name">Pocket Pulse</string>
     
     <!-- Onboarding -->
-    <string name="onboarding_welcome_title">Welcome to Vesto</string>
+    <string name="onboarding_welcome_title">Welcome to Pocket Pulse</string>
     <string name="onboarding_welcome_subtitle">Your personal finance companion</string>
     <string name="onboarding_budget_title">Set Your Monthly Budget</string>
     <string name="onboarding_currency_title">Choose Your Currency</string>

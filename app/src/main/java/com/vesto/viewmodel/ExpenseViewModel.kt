@@ -142,3 +142,19 @@ data class AddExpenseState(
     val categoryError: String? = null,
     val isLoading: Boolean = false
 )
+
+/**
+ * ViewModel Factory for ExpenseViewModel
+ */
+class ExpenseViewModelFactory(
+    private val expenseRepository: ExpenseRepository,
+    private val categoryRepository: CategoryRepository
+) : androidx.lifecycle.ViewModelProvider.Factory {
+    @Suppress("UNCHECKED_CAST")
+    override fun <T : androidx.lifecycle.ViewModel> create(modelClass: Class<T>): T {
+        if (modelClass.isAssignableFrom(ExpenseViewModel::class.java)) {
+            return ExpenseViewModel(expenseRepository, categoryRepository) as T
+        }
+        throw IllegalArgumentException("Unknown ViewModel class")
+    }
+}

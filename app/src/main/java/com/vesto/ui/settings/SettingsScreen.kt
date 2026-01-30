@@ -19,6 +19,7 @@ import com.vesto.viewmodel.SettingsViewModel
  * Settings Screen
  * Manage budget, currency, dark mode, and notifications
  */
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun SettingsScreen(
     viewModel: SettingsViewModel,

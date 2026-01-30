@@ -101,6 +101,7 @@ fun CurrencySelectionScreen(
 /**
  * Currency card component
  */
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 private fun CurrencyCard(
     currency: Currency,
@@ -150,7 +151,7 @@ private fun CurrencyCard(
                     MaterialTheme.colorScheme.onSurfaceVariant
             )
             Text(
-                text = currency.name,
+                text = currency.currencyName,
                 style = MaterialTheme.typography.bodySmall,
                 textAlign = TextAlign.Center,
                 color = if (isSelected) 

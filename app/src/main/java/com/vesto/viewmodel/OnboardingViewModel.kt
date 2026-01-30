@@ -80,6 +80,21 @@ class OnboardingViewModel(
 }
 
 /**
+ * ViewModel Factory for OnboardingViewModel
+ */
+class OnboardingViewModelFactory(
+    private val userPreferencesRepository: UserPreferencesRepository
+) : androidx.lifecycle.ViewModelProvider.Factory {
+    @Suppress("UNCHECKED_CAST")
+    override fun <T : androidx.lifecycle.ViewModel> create(modelClass: Class<T>): T {
+        if (modelClass.isAssignableFrom(OnboardingViewModel::class.java)) {
+            return OnboardingViewModel(userPreferencesRepository) as T
+        }
+        throw IllegalArgumentException("Unknown ViewModel class")
+    }
+}
+
+/**
  * UI State for onboarding
  */
 data class OnboardingUiState(
