@@ -1,4 +1,4 @@
-# Vesto - Personal Finance Tracker
+# Pocket Pulse - Personal Finance Tracker
 
 A modern Android app built with Kotlin and Jetpack Compose to help students track expenses, manage budgets, and gain financial insights.
 
