@@ -26,7 +26,7 @@ A modern Android app built with Kotlin and Jetpack Compose to help students trac
 ## 📁 Project Structure
 
 ```
-app/src/main/java/com/vesto/
+app/src/main/java/com/pocketpulse/
 ├── data/              # Data layer
 │   ├── local/         # Room database (entities, DAOs)
 │   └── repository/    # Repository pattern
